@@ -1,6 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
 
+
+
  class AutoPlay extends React.Component {
   render() {
     const settings = {
@@ -11,29 +13,30 @@ import Slider from "react-slick";
       autoplay: true,
       speed: 2000,
       autoplaySpeed: 2000,
-      cssEase: "linear"
+      cssEase: "linear",
+      
     };
     return (
-      <div>
+      <div className={'slider-container'}>
         {/* <h2>Auto Play</h2> */}
         <Slider {...settings}>
           <div>
-            <h3>1</h3>
+          <img src={require('./empty-image1.png')} />
           </div>
           <div>
-            <h3>2</h3>
+          <img src={require('./empty-image1.png')} />
           </div>
           <div>
-            <h3>3</h3>
+          <img src={require('./empty-image1.png')} />
           </div>
           <div>
-            <h3>4</h3>
+          <img src={require('./empty-image1.png')} />
           </div>
           <div>
-            <h3>5</h3>
+          <img src={require('./empty-image1.png')} />
           </div>
           <div>
-            <h3>6</h3>
+          <img src={require('./empty-image1.png')} />
           </div>
         </Slider>
       </div>
