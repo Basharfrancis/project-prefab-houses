@@ -9,7 +9,7 @@ class Header extends React.Component  {
     render(){
         return(
             <div className="header">
-            <div className="container">
+            <div className="container-fluied">
             <Row>
             
             <div class="col-sm-4">LOGO</div>
@@ -17,11 +17,11 @@ class Header extends React.Component  {
             
             <div class="col-sm-8">
             <Navbar bg="dark" variant="dark">
-    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+    <Navbar.Brand href="#home">Home</Navbar.Brand>
     <Nav className="mr-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
+      <Nav.Link href="#home">About</Nav.Link>
+      <Nav.Link href="#features">Project</Nav.Link>
+      <Nav.Link href="#pricing">Contact</Nav.Link>
     </Nav>
     {/* <Form inline>
       <FormControl type="text" placeholder="Search" className="mr-sm-2" />
