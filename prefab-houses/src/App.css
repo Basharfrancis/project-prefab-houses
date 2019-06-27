@@ -1,6 +1,10 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
+.marginpage {
+    margin: 50px;
+}
+
 .slider-container{
     margin: 40px;
 }
@@ -9,5 +13,10 @@
 }
 
 .slider-container img {
-    width: 80%;
+    width: 95%;
+}
+
+
+.navbar{
+    width: 100%;
 }

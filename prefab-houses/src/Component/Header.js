@@ -1,71 +1,39 @@
 import React from "react";
-import Navbar from 'react-bootstrap/Navbar'
-import Row from 'react-bootstrap/Row';
-import Nav from 'react-bootstrap/Nav'
-import Button from 'react-bootstrap/Button';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 
 
 class Header extends React.Component  {
     render(){
         return(
-            <div className="header">
-            <div className="container">
-            <Row>
+          
             
-            <div class="col-sm-4">LOGO</div>
-
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <div className= "navbar">
+              <div className= "logo">
+              <Navbar.Brand href="#Home">Pre FabHouses</Navbar.Brand>
+              </div>
+              <div className="menu">
+              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             
-            <div class="col-sm-8">
-            <Navbar bg="dark" variant="dark">
-    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-    <Nav className="mr-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
-    </Nav>
-    {/* <Form inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-info">Search</Button>
-    </Form> */}
-  </Navbar>
-  <br />
-  {/* <Navbar bg="primary" variant="dark">
-    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-    <Nav className="mr-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
-    </Nav> */}
-    {/* <Form inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-light">Search</Button>
-    </Form> */}
-  {/* </Navbar> */}
+              <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav className="mr-auto">
+                  <Nav.Link href="#Home">Home</Nav.Link>
+                  <NavDropdown title="Products" id="collasible-nav-dropdown">
+                    <NavDropdown.Item href="#action/3.1">One Bed Room</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2">Two Bed Room</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">Three Bed Room</NavDropdown.Item>
+                  </NavDropdown>
+                  <Nav.Link href="#About">About</Nav.Link>
+                  <Nav.Link href="#Contact Us">Contact Us</Nav.Link>
+                </Nav>
+              </Navbar.Collapse>
+              </div>
+            </div>
+          </Navbar>
+     
+        )
+  }    
+}  
 
-  {/* <br />
-  <Navbar bg="light" variant="light">
-    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-    <Nav className="mr-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
-    </Nav> */}
-    {/* <Form inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-primary">Search</Button>
-    </Form> */}
-  {/* </Navbar> */}
-  </div>
-
-
-</Row>
-            </div> 
-</div>
-
-
-            
-        );
-    }
-}
 export default Header
 
