@@ -12,7 +12,7 @@ import Slider from "react-slick";
       slidesToScroll: 1,
       autoplay: true,
       speed: 2000,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 5000,
       cssEase: "linear",
       
     };
@@ -21,22 +21,22 @@ import Slider from "react-slick";
         {/* <h2>Auto Play</h2> */}
         <Slider {...settings}>
           <div>
-          <img src={require('./empty-image1.png')} />
+          <img src={require('./empty-image1.jpg')} />
           </div>
           <div>
-          <img src={require('./empty-image1.png')} />
+          <img src={require('./empty-image1.jpg')} />
           </div>
           <div>
-          <img src={require('./empty-image1.png')} />
+          <img src={require('./empty-image1.jpg')} />
           </div>
           <div>
-          <img src={require('./empty-image1.png')} />
+          <img src={require('./empty-image1.jpg')} />
           </div>
           <div>
-          <img src={require('./empty-image1.png')} />
+          <img src={require('./empty-image1.jpg')} />
           </div>
           <div>
-          <img src={require('./empty-image1.png')} />
+          <img src={require('./empty-image1.jpg')} />
           </div>
         </Slider>
       </div>
