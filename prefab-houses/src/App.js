@@ -6,10 +6,13 @@ import Header from "./Component/Header";
 
 class App extends Component{
     render(){
-    return(<div className="marginpage">
+    return(<div className="App">
+    <div className="paddingpage" >
         <Header/>
         <Autoplay/>
         <Contactform/>
+    </div>
+       
         </div>
     )
 }}

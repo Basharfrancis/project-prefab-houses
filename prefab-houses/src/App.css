@@ -1,8 +1,18 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-.marginpage {
-    margin: 50px;
+.App{
+     background-image:url('background2.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+     
+}
+.menu a{
+    margin-right: 50px;
+}
+
+.paddingpage {
+   padding: 50px;
 }
 
 .slider-container{
@@ -18,5 +28,11 @@
 
 
 .navbar{
+    background: transparent !important;
+    
     width: 100%;
+}
+
+.logo {
+  margin-left: -10%;
 }
