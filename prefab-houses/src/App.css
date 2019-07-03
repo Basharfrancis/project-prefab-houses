@@ -5,8 +5,10 @@
      background-image:url('background2.jpg');
      background-repeat: no-repeat;
      background-size: cover;
+     font-style: 
      
 }
+
 .menu a{
     margin-right: 50px;
 }
@@ -38,5 +40,21 @@
 }
 
 .footer {
-    padding-top: 50px;
+    padding-top: 100px;
 }
+
+.contactform {
+    width: 50%;
+}
+
+
+.map {
+    float: right;
+    width: 600px; 
+    height: 400px;
+}
+
+.textcontact {
+    padding-bottom: 40px;
+}
+

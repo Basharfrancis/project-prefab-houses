@@ -1,7 +1,6 @@
 import React,{Component} from "react";
 import './App.css';
 import Autoplay from './Component/Autoplay';
-import Contactform from "./Component/Contactform";
 import Header from "./Component/Header";
 import Footer from "./Component/Footer";
 
