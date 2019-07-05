@@ -9,7 +9,7 @@ class Header extends React.Component  {
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
             <div className= "navbar">
               <div className= "logo">
-              <Navbar.Brand href="#Home"><img src={require('./logo1.png')} /></Navbar.Brand>
+              <Navbar.Brand href="#Home"><img src={process.env.PUBLIC_URL +"/logo2.png"}/></Navbar.Brand>
               </div>
               <div className="menu">
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />

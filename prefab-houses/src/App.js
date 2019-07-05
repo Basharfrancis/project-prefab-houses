@@ -6,7 +6,7 @@ import Footer from "./Component/Footer";
 
 class App extends Component{
     render(){
-    return(<div className="App">
+    return(<div className="App" style={{backgroundImage: `url(${process.env.PUBLIC_URL +"/background2.jpg"})`} }>
     <div className="paddingpage" >
         <Header/>
         <Autoplay/>
