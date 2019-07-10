@@ -42,7 +42,7 @@ app.post('/contact',(req,res)=>{
         html : `<h3>Message Contact</h3>
                    <ul>
                        <li>Name :${req.body.name}</li>
-                       <li>Last Name :${req.body.lastname}</li>
+                       <li>Phone Number :${req.body.phoneNumber}</li>
                        <li>Email :${req.body.email}</li>
                    </ul>
                    <h3>Message</h3>
@@ -67,7 +67,7 @@ app.get("/api/users", (req, res, next) => {
         res.json({
             "message":"success",
             "data":rows
-        })
+        });
       });
 });
 
