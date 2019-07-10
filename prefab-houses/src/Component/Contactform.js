@@ -22,7 +22,7 @@ handleChange = (event)=>{
     }
 
 async handleSubmit (event){
-      event.preventDefault();
+      // event.preventDefault();
       const {name, phoneNumber, email, message} = this.state
      
       

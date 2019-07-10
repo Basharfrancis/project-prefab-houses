@@ -48,9 +48,12 @@ class Singleproduct extends Component {
   
  
   </Row>
-  <Button style={{marginTop: '30px'}} variant="secondary" size="lg" block>
+    <a href="/ContactPage" style={{
+      width: '100%'
+    }}><Button style={{marginTop: '30px'}} variant="secondary" size="lg" block>
   <Link to='/ContactPage'> Contact Us</Link>
   </Button>
+  </a>
 
   </Container>
 

@@ -24,21 +24,29 @@ class Header extends React.Component  {
                 <Nav className="mr-auto">
 
                   <Nav.Link href="#Home"><Link to='/'> Home </Link> </Nav.Link>
-                  <NavDropdown title="Products" id="collasible-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.4"><Link to='/AllProductspage'>  All Products</Link>  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.1" onClick={ refreshPage }><Link to={{ 
+                   <NavDropdown title="Products" id="collasible-nav-dropdown">
+                   <Link to='/AllProductspage'>  <NavDropdown.Item href="#action/3.4"><Link to='/AllProductspage'>  All Products</Link>  </NavDropdown.Item></Link> 
+                  <NavDropdown.Divider /> 
+                  <Link to={{ 
                           pathname: '/SingleCategoryPage', 
-                          state: { category: 'Kit-Houses' } }} >Kit-House</Link></NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2" onClick={ refreshPage}><Link to={{ 
+                          state: { category: 'Kit-Houses' } }} ><NavDropdown.Item href="#action/3.1" onClick={ refreshPage }><Link to={{ 
                           pathname: '/SingleCategoryPage', 
-                          state: { category: 'Modular' } }} > Modular</Link></NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3" onClick={ refreshPage}><Link to={{ 
+                          state: { category: 'Kit-Houses' } }} >   Kit-House  </Link></NavDropdown.Item></Link>
+           <Link to={{ 
                           pathname: '/SingleCategoryPage', 
-                          state: { category: 'SIP' } }} >SIP</Link></NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.5" onClick={ refreshPage}><Link to={{ 
+                          state: { category: 'Modular' } }} > <NavDropdown.Item href="#action/3.2" onClick={ refreshPage}><Link to={{ 
                           pathname: '/SingleCategoryPage', 
-                          state: { category: 'Panelized' } }} >Panilized</Link></NavDropdown.Item>
+                          state: { category: 'Kit-Houses' } }} > Modular</Link>  </NavDropdown.Item></Link>
+                   <Link to={{ 
+                          pathname: '/SingleCategoryPage', 
+                          state: { category: 'SIP' } }} > <NavDropdown.Item href="#action/3.3" onClick={ refreshPage}><Link to={{ 
+                          pathname: '/SingleCategoryPage', 
+                          state: { category: 'Kit-Houses' } }} > SIP</Link> </NavDropdown.Item></Link>
+                   <Link to={{ 
+                          pathname: '/SingleCategoryPage', 
+                          state: { category: 'Panelized' } }} > <NavDropdown.Item href="#action/3.5" onClick={ refreshPage}><Link to={{ 
+                          pathname: '/SingleCategoryPage', 
+                          state: { category: 'Kit-Houses' } }} > Panilized </Link></NavDropdown.Item></Link>
                   </NavDropdown>
                   <Nav.Link href="#About"> <Link to='/AboutPage'> About</Link> </Nav.Link>
                   <Nav.Link href="#Contact Us"><Link to='/ContactPage'> Contact Us </Link> </Nav.Link>

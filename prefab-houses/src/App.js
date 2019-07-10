@@ -78,7 +78,6 @@ import Admin from "./Component/Admin"
            
             <Footer />
           </div>
-          <input type="file"></input>
         </Router>
       </div>
     );
