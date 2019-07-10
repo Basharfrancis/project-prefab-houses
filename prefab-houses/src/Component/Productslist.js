@@ -17,8 +17,8 @@ class Productslist extends Component {
   render() {
     return (
     
-      <CardDeck style={{display: 'grid', gridTemplateColumns: '1fr', gridRowGap: '20px'}}>
-        <Card style={{display: 'grid', gridTemplateColumns: '1fr 1fr'}}>
+      <CardDeck className="deckgrid">
+        <Card className="cardgrid">
         <a href=""><Link to={{ 
                           pathname: '/SingleCategoryPage', 
                           state: { category: 'Kit-Houses' } }}  >
@@ -39,7 +39,7 @@ class Productslist extends Component {
             </Card.Text>
           </Card.Body>
         </Card>
-        <Card style={{display: 'grid', gridTemplateColumns: '1fr 1fr'}}>
+        <Card className="cardgrid">
          <a href=""><Link to={{ 
                           pathname: '/SingleCategoryPage', 
                           state: { category: 'Modular' } }} >  <Card.Img variant="top" src={process.env.PUBLIC_URL +"/modular.jpg"} /></Link></a>
@@ -60,7 +60,7 @@ class Productslist extends Component {
             </Card.Text>
           </Card.Body>
         </Card>
-        <Card style={{display: 'grid', gridTemplateColumns: '1fr 1fr'}}>
+        <Card className="cardgrid">
         <a href=""><Link to={{ 
                           pathname: '/SingleCategoryPage', 
                           state: { category: 'SIP' } }} ><Card.Img variant="top" src={process.env.PUBLIC_URL +"/SIP.jpg"} /></Link></a>
@@ -80,7 +80,7 @@ class Productslist extends Component {
             </Card.Text>
           </Card.Body>
         </Card>
-        <Card style={{display: 'grid', gridTemplateColumns: '1fr 1fr'}}>
+        <Card className="cardgrid">
         <a href=""><Link to={{ 
                           pathname: '/SingleCategoryPage', 
                           state: { category: 'Panelized' } }} >  <Card.Img variant="top" src={process.env.PUBLIC_URL +"/Panelized.jpg"} /></Link></a>

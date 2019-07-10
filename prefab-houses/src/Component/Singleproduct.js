@@ -31,7 +31,7 @@ class Singleproduct extends Component {
     <Container>
     <Row>
     <CardDeck>
-  <Card style={{display: 'grid', gridTemplateColumns: '1fr 1fr'}}>
+    <Card className="cardgrid">
     <Card.Img variant="top" src={data.image}/>
     <Card.Body>
       <Card.Title>{data.title}</Card.Title>
