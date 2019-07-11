@@ -29,10 +29,10 @@ class SingleCategoryPage extends Component {
                 this.props.data.filter(element=> element.categorie == this.state.category).map(data=><div className="Card1">     
                   <Card >
                       
-                    <a href="" ><Link to={{ 
+                    <Link to={{ 
                           pathname: '/Singleproduct',
                           state: {id: data.id}
-                          }} ><Card.Img variant="top" src={data.image}/></Link></a>
+                          }} ><Card.Img variant="top" src={data.image}/></Link>
                     <Card.Body>
                         <Card.Title>
                         {data.title}

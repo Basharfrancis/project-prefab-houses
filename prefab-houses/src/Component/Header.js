@@ -36,17 +36,17 @@ class Header extends React.Component  {
                           pathname: '/SingleCategoryPage', 
                           state: { category: 'Modular' } }} > <NavDropdown.Item href="#action/3.2" onClick={ refreshPage}><Link to={{ 
                           pathname: '/SingleCategoryPage', 
-                          state: { category: 'Kit-Houses' } }} > Modular</Link>  </NavDropdown.Item></Link>
+                          state: { category: 'Modular' } }} > Modular</Link>  </NavDropdown.Item></Link>
                    <Link to={{ 
                           pathname: '/SingleCategoryPage', 
                           state: { category: 'SIP' } }} > <NavDropdown.Item href="#action/3.3" onClick={ refreshPage}><Link to={{ 
                           pathname: '/SingleCategoryPage', 
-                          state: { category: 'Kit-Houses' } }} > SIP</Link> </NavDropdown.Item></Link>
+                          state: { category: 'SIP' } }} > SIP</Link> </NavDropdown.Item></Link>
                    <Link to={{ 
                           pathname: '/SingleCategoryPage', 
                           state: { category: 'Panelized' } }} > <NavDropdown.Item href="#action/3.5" onClick={ refreshPage}><Link to={{ 
                           pathname: '/SingleCategoryPage', 
-                          state: { category: 'Kit-Houses' } }} > Panilized </Link></NavDropdown.Item></Link>
+                          state: { category: 'Panelized' } }} > Panilized </Link></NavDropdown.Item></Link>
                   </NavDropdown>
                   <Nav.Link href="#About"> <Link to='/AboutPage'> About</Link> </Nav.Link>
                   <Nav.Link href="#Contact Us"><Link to='/ContactPage'> Contact Us </Link> </Nav.Link>
