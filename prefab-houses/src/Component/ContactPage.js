@@ -11,7 +11,7 @@ class ContactPage extends Component{
     <div className="paddingpage" >
         {/* <Header/> */}
         <div className="clearfix">
-        <p className="textcontact">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p className="textcontact">This list takes a range of ranking criteria into consideration, including but not limited to: work history, customer satisfaction, awards and recognition, geographic area of work, cost, building permits, and clientele. We spent over 40 hours researching local contractors before calculating the final ranking for this post. If there is additional information about your business that could affect these rankings, please fill out this form and we will take it into consideration.</p>
         <div className='container'>
        <div className='contitem'><Contactform/></div> 
        <div className='contitem'>
