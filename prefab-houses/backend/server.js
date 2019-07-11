@@ -3,8 +3,20 @@ var express = require("express")
 var app = express()
 var db = require("./database.js")
 const cors = require('cors')
-
 const nodemailer = require('nodemailer');
+
+app.use(express.static('./Public'))
+
+const multer = require('multer');
+const storge = multer.diskStorage({
+    destination: function(req,file,cb){
+      cb(null,'Public/')
+    },
+    filename:function(req,file,cb){
+      cb(null,Date.now()+'-'+file.originalname)
+    }
+  });
+const upload = multer({storage:storge})
 
 
 var bodyParser = require("body-parser");
@@ -102,7 +114,7 @@ app.get('/api/users/slider',(req,res,next) =>{
 })
 
 // CREATE
-app.post("/api/user/", (req, res, next) => {
+app.post("/api/user/",upload.single('image'), (req, res, next) => {
     var errors=[]
     if (!req.body.title){
         errors.push("No title specified");
@@ -119,9 +131,7 @@ app.post("/api/user/", (req, res, next) => {
     if (!req.body.categorie){
         errors.push("No categorie specified");
     }
-    if (!req.body.image){
-        errors.push("No image specified");
-    }
+   
     if (errors.length){
         res.status(400).json({"error":errors.join(",")});
         return;
@@ -132,7 +142,8 @@ app.post("/api/user/", (req, res, next) => {
         price: req.body.price,
         construction_time: req.body.construction_time,
         categorie: req.body.categorie,
-        image: req.body.image
+        image: req.file.filename
+
     }
     var sql ='INSERT INTO products (title, description, price, construction_time, categorie, image) VALUES (?,?,?,?,?,?)'
     var params =[data.title, data.description, data.price, data.construction_time, data.categorie, data.image]
@@ -151,14 +162,14 @@ app.post("/api/user/", (req, res, next) => {
 });
 
 // UPDATE
-app.patch("/api/user/:id", (req, res, next) => {
+app.patch("/api/user/:id", upload.single('image'), (req, res, next) => {
     var data = {
         title: req.body.title,
         description: req.body.description,
         price : req.body.price,
         construction_time: req.body.construction_time,
         categorie: req.body.categorie,
-        image: req.body.image
+        image: req.file.filename
     }
     db.run(
         `UPDATE products SET 

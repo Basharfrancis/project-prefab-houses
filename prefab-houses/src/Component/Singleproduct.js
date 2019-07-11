@@ -32,7 +32,7 @@ class Singleproduct extends Component {
     <Row>
     <CardDeck>
   <Card style={{display: 'grid', gridTemplateColumns: '1fr 1fr'}}>
-    <Card.Img variant="top" src={data.image}/>
+    <Card.Img variant="top" src={"http://localhost:8000/"+data.image}/>
     <Card.Body>
       <Card.Title>{data.title}</Card.Title>
       <Card.Text>

@@ -1,4 +1,5 @@
 import React,{Component, createRef} from 'react';
+import Form from 'react-bootstrap/Form';
 import '../App.css';
 import axios from "axios";
 import { async } from 'q';
@@ -41,39 +42,79 @@ handleTaskChange = (event) => {
       [event.target.name]: event.target.value       
      });
   }
-
-postRequest = async () => {
-
-  
- const {image, title, description, price, construction_time, categorie} = this.state;
-  await axios.post("http://localhost:8000/api/user/", {
-    image,
-    title,
-    description,
-    price,
-    construction_time,
-    categorie
-  });
+onChangeHandler =  (e)=>{
+  console.log("here", e.target.files[0])
+    this.setState({
+       image: e.target.files[0]
+      
+   })
 }
+// postRequest = async () => {
+//  const {image, title, description, price, construction_time, categorie} = this.state;
+//   await axios.post("http://localhost:8000/api/user/", {
+//     image,
+//     title,
+//     ,
+//     price,
+//     construction_time,
+//     categorie
+//   });
+// } 
 
- 
+postRequest = async(event)=>{
+  event.preventDefault();
+   const body = new FormData();
+   console.log(this.state.image)
+  body.append('image',this.state.image)
+  body.append('description',this.state.description)
+  body.append('title',this.state.title)
+  body.append('price',this.state.price)
+  body.append('construction_time',this.state.construction_time)
+  body.append('categorie',this.state.categorie)
+ await axios.post( 'http://localhost:8000/api/user/',
+      body 
+      
+    )
+    
+  }
+   
+     
 
-patchRequest = async (index, event) => {
+// patchRequest = async (index, event) => {
   
-  const { image,title, description, price, construction_time, categorie } = this.state;
-   await axios.patch("http://localhost:8000/api/user/"+index, {
-    image,
-    title,
-    description,
-    price,
-    construction_time,
-    categorie
-  });
+//   const { image,title, description, price, construction_time, categorie } = this.state;
+//    await axios.patch("http://localhost:8000/api/user/"+index, {
+//     image,
+//     title,
+//     description,
+//     price,
+//     construction_time,
+//     categorie
+//   });
  
+//   this.setState({
+//     editing: false
+//   })
+
+// }
+patchRequest = async(index, event)=>{
+  const body = new FormData();
+  body.append('image',this.state.image)
+  body.append('description',this.state.description)
+  body.append('title',this.state.title)
+  body.append('price',this.state.price)
+  body.append('construction_time',this.state.construction_time)
+  body.append('categorie',this.state.categorie)
+  try {await axios.patch( "http://localhost:8000/api/user/"+index,
+      body 
+   )}
+     catch(err)
+     {
+         console.log(err)
+     }
   this.setState({
     editing: false
   })
-
 }
 
  
@@ -115,7 +156,7 @@ render(){
 
         <form onSubmit={this.handleSubmit}> 
 
-        <img src={elementOfArray.image}/>
+        <img src={"http://localhost:8000/"+elementOfArray.image}/>
 
         <p>title is: {elementOfArray.title}</p>
 
@@ -142,7 +183,8 @@ render(){
         <section ref={this.state.myRef}>
       <form>
         <ul  >
-       <li> <input   name="image" placeholder="enter the link of the image"  value={this.state.image} onChange={this.handleTaskChange}></input></li> 
+       {/* <li> <input   name="image" placeholder="enter the link of the image"  value={this.state.image} onChange={this.handleTaskChange}></input></li>  */}
+       <li> <input type="file" onChange={this.onChangeHandler}></input></li>
        <li> <input   name="title" placeholder="title" value={this.state.title} onChange={this.handleTaskChange}></input></li> 
        <li> <input   name="description" placeholder="description" value={this.state.description} onChange={this.handleTaskChange}></input></li> 
        <li> <input   name="price" placeholder="price" value={this.state.price} onChange={this.handleTaskChange}></input></li> 

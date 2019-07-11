@@ -32,7 +32,7 @@ class SingleCategoryPage extends Component {
                     <a href="" ><Link to={{ 
                           pathname: '/Singleproduct',
                           state: {id: data.id}
-                          }} ><Card.Img variant="top" src={data.image}/></Link></a>
+                          }} ><Card.Img variant="top" src={"http://localhost:8000/"+data.image}/></Link></a>
                     <Card.Body>
                         <Card.Title>
                         {data.title}

@@ -59,7 +59,7 @@ class AutoPlay extends React.Component {
          <Slider {...settings}>
           {this.state.data.map(item => (
             <div>
-              <img src={item.image} />
+              <img src={"http://localhost:8000/"+item.image} />
             </div>
           ))}
         </Slider>

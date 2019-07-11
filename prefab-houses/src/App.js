@@ -64,8 +64,7 @@ import Admin from "./Component/Admin"
               exact
               render={routeProps => <Singleproduct {...routeProps} {...this.state} />}
             />
-            {/* <Route path="/Admin/" component={Admin} /> */}
-            <Route
+             <Route
               path="/Admin/"
               exact
               render={routeProps => <Admin arrayOfData={this.state.data} />}
@@ -78,7 +77,6 @@ import Admin from "./Component/Admin"
            
             <Footer />
           </div>
-          <input type="file"></input>
         </Router>
       </div>
     );
