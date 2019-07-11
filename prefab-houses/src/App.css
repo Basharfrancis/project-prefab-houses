@@ -15,6 +15,10 @@ html, body {
 .menu a{
     margin-right: 50px;
 }
+.menu .dropdown-menu a{
+    margin-right: 0px
+}
+
 
 .paddingpage {
    padding: 60px;
@@ -34,13 +38,31 @@ html, body {
 
 .navbar{
     background: transparent !important;
-    
     width: 100%;
+    /* position: fixed;
+    z-index: 1; */
 }
+
 .card {
     background: transparent !important;
+    
+}
+.cardgrid {
+    display: grid !important ;
+    grid-template-columns: 1fr 1fr;
 
 }
+
+.deckgrid {
+    display: grid !important;   
+    grid-template-columns: 1fr !important;  
+    grid-row-gap: 20px !important;  
+}
+
+.list-group-item {
+    background: transparent !important; 
+}
+
 
 .footer {
     padding-top: 100px;
@@ -90,6 +112,7 @@ html, body {
      height: 450px;
  }
  
+  
  .categoryy{
     width: 90%;
     margin: 0 auto 0 auto;
@@ -138,5 +161,24 @@ html, body {
         width: 250px; 
         height: 250px;
     }
+    
+    .Card1 {
+        width: 100%;
+    }
+    
+    .card {
+      width: 100%;
+    }
+
+    .cardgrid {
+        display: block !important;
+        width: 100%;
+      }
+
+    .deckgrid {
+      display: block !important;
+      width: 100%;
+    }
+    
 }
   
