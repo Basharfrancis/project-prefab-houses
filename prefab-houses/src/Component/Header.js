@@ -24,7 +24,7 @@ class Header extends React.Component  {
                 <Nav className="mr-auto">
 
                   <Nav.Link href="#Home"><Link to='/'> Home </Link> </Nav.Link>
-                   <NavDropdown title="Products" id="collasible-nav-dropdown">
+                   <NavDropdown  title="Products" id="collasible-nav-dropdown">
                    <Link to='/AllProductspage'>  <NavDropdown.Item href="#action/3.4"><Link to='/AllProductspage'>  All Products</Link>  </NavDropdown.Item></Link> 
                   <NavDropdown.Divider /> 
                   <Link to={{ 
