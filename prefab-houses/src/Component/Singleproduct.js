@@ -31,14 +31,14 @@ class Singleproduct extends Component {
     <Container>
     <Row>
     <CardDeck>
-  <Card style={{display: 'grid', gridTemplateColumns: '1fr 1fr'}}>
+  <Card className="cardgrid">
     <Card.Img variant="top" src={"http://localhost:8000/"+data.image}/>
     <Card.Body>
       <Card.Title>{data.title}</Card.Title>
       <Card.Text>
        Description : {data.description}<br/>
-        Price: {data.price}<br/>
-       construction_time: {data.construction_time}
+        Price: € {data.price}<br/>
+       construction_time: {data.construction_time} Months
       </Card.Text>
     </Card.Body>
   </Card>

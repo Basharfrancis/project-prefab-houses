@@ -7,26 +7,15 @@ import {Link} from "react-router-dom";
 
 import { throwStatement } from '@babel/types';
 
+const SingleCategoryPage = (props)=> {
 
-class SingleCategoryPage extends Component {
-    constructor(props) {
-        super(props);
-       this.state= {
-            category: this.props.location.state.category
-        } 
-        }
-    componentDidMount(){
-        console.log(this.props.location)
-    }
-    render() {
+    const {category} = props.match.params;
+    return (
         
-         return (
-            
-                 
             <div className="categoryy">
   
             {
-                this.props.data.filter(element=> element.categorie == this.state.category).map(data=><div className="Card1">     
+                props.data.filter(element=> element.categorie == category).map(data=><div className="Card1">     
                   <Card >
                       
                     <Link to={{ 
@@ -41,17 +30,15 @@ class SingleCategoryPage extends Component {
                         {data.description}
                         </Card.Text>
                         <ListGroup className="list-group-flush">
-                            <ListGroupItem>{'Price: $'+data.price}</ListGroupItem>
-                            <ListGroupItem>{'Time: '+data.construction_time}</ListGroupItem>
+                            <ListGroupItem>{'Price: €'+data.price}</ListGroupItem>
+                            <ListGroupItem>{'Time: '+data.construction_time+' months'}</ListGroupItem>
                            
                         </ListGroup>
                     </Card.Body>
                 </Card></div>)}
                 
             </div>
-             
-        )
-}
+    )
 }
     
     export default SingleCategoryPage;

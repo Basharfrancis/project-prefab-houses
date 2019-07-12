@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import {Link} from "react-router-dom"
+import { LinkContainer } from 'react-router-bootstrap';
 
 
 
@@ -8,7 +9,8 @@ class Header extends React.Component  {
   
     render(){
       function refreshPage(){ 
-        window.location.reload(); 
+        // console.log('location 22', this.props.location)
+        // window.location.reload(); 
     }
     
         return(
@@ -19,35 +21,34 @@ class Header extends React.Component  {
               </div>
               <div className="menu">
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            
+              
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
 
                   <Nav.Link ><Link to='/'> Home </Link> </Nav.Link>
                    <NavDropdown  title="Products" id="collasible-nav-dropdown">
-                   <Link to='/AllProductspage'>  <NavDropdown.Item  ><Link to='/AllProductspage'>  All Products</Link>  </NavDropdown.Item></Link> 
+                     <NavDropdown.Item  ><Link to='/AllProductspage' style={{display: 'block', width: '100%'}}>  All Products</Link>  </NavDropdown.Item>
                   <NavDropdown.Divider /> 
-                  <Link to={{ 
-                          pathname: '/SingleCategoryPage', 
-                          state: { category: 'Kit-Houses' } }} ><NavDropdown.Item   onClick={ refreshPage }><Link to={{ 
-                          pathname: '/SingleCategoryPage', 
-                          state: { category: 'Kit-Houses' } }} >   Kit-House  </Link></NavDropdown.Item></Link>
-           <Link to={{ 
-                          pathname: '/SingleCategoryPage', 
-                          state: { category: 'Modular' } }} > <NavDropdown.Item   onClick={ refreshPage}><Link to={{ 
-                          pathname: '/SingleCategoryPage', 
-                          state: { category: 'Modular' } }} > Modular</Link>  </NavDropdown.Item></Link>
-                   <Link to={{ 
-                          pathname: '/SingleCategoryPage', 
-                          state: { category: 'SIP' } }} > <NavDropdown.Item   onClick={ refreshPage}><Link to={{ 
-                          pathname: '/SingleCategoryPage', 
-                          state: { category: 'SIP' } }} > SIP</Link> </NavDropdown.Item></Link>
-                   <Link to={{ 
-                          pathname: '/SingleCategoryPage', 
-                          state: { category: 'Panelized' } }} > <NavDropdown.Item   onClick={ refreshPage}><Link to={{ 
-                          pathname: '/SingleCategoryPage', 
-                          state: { category: 'Panelized' } }} > Panilized </Link></NavDropdown.Item></Link>
-                  </NavDropdown>
+ 
+                             <NavDropdown.Item> <Link to={ '/SingleCategoryPage/Kit-Houses'}
+                          style={{display: 'block', width: '100%'}}
+                          > Kit Houses</Link> </NavDropdown.Item>
+
+                            <NavDropdown.Item> <Link to={ '/SingleCategoryPage/Modular'}
+                          style={{display: 'block', width: '100%'}}
+                          > Modular</Link> </NavDropdown.Item>
+
+                            <NavDropdown.Item> <Link to={ '/SingleCategoryPage/SIP'}
+                          style={{display: 'block', width: '100%'}}
+                          > SIP</Link> </NavDropdown.Item>
+
+                          <NavDropdown.Item> <Link to={ '/SingleCategoryPage/Panelized'}
+                          style={{display: 'block', width: '100%'}}
+                          > Panelized</Link> </NavDropdown.Item>
+
+
+                         
+                   </NavDropdown>
                   <Nav.Link  > <Link to='/AboutPage'> About</Link> </Nav.Link>
                   <Nav.Link  ><Link to='/ContactPage'> Contact Us </Link> </Nav.Link>
                 </Nav>

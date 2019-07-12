@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import '../App.css';
 import axios from "axios";
 import { async } from 'q';
-
+import Header2 from './Header2'
 
 
 class Admin extends Component {
@@ -151,6 +151,7 @@ render(){
 
   return (
     <div>
+      <Header2 /> 
       {this.props.arrayOfData.map((elementOfArray, index)=>
         <div>
 

@@ -19,14 +19,11 @@ class Productslist extends Component {
     
       <CardDeck className="deckgrid">
         <Card className="cardgrid">
-        <a href=""><Link to={{ 
-                          pathname: '/SingleCategoryPage', 
-                          state: { category: 'Kit-Houses' } }}  >
+        <a href=""> 
+                          <Link to={ '/SingleCategoryPage/Kit-Houses'}>
              <Card.Img variant="top" src={process.env.PUBLIC_URL +"/kithouse.jpg"} /></Link></a>
           <Card.Body>
-           <a href=""><Link to={{ 
-                          pathname: '/SingleCategoryPage', 
-                          state: { category: 'Kit-Houses' } }} >  <Card.Title>Kit-House</Card.Title></Link></a>
+           <a href=""><Link to={ '/SingleCategoryPage/Kit-Houses'}>  <Card.Title>Kit-House</Card.Title></Link></a>
             <Card.Text>
               Kit houses go back to the old days when people bought houses in a
               catalog (think Sears houses), and they were shipped by train to
@@ -40,13 +37,9 @@ class Productslist extends Component {
           </Card.Body>
         </Card>
         <Card className="cardgrid">
-         <a href=""><Link to={{ 
-                          pathname: '/SingleCategoryPage', 
-                          state: { category: 'Modular' } }} >  <Card.Img variant="top" src={process.env.PUBLIC_URL +"/modular.jpg"} /></Link></a>
+         <a href=""><Link to={ '/SingleCategoryPage/Modular'}>  <Card.Img variant="top" src={process.env.PUBLIC_URL +"/modular.jpg"} /></Link></a>
           <Card.Body>
-          <a href=""><Link to={{ 
-                          pathname: '/SingleCategoryPage', 
-                          state: { category: 'Modular' } }} >  <Card.Title>Modular</Card.Title></Link></a>
+          <a href=""><Link to={ '/SingleCategoryPage/Modular'}> <Card.Title>Modular</Card.Title></Link></a>
             <Card.Text>
               Modular is one of the most complete types of prefab housing.
               Modules or boxes are built in the factory, and wrapped and taken
@@ -61,13 +54,9 @@ class Productslist extends Component {
           </Card.Body>
         </Card>
         <Card className="cardgrid">
-        <a href=""><Link to={{ 
-                          pathname: '/SingleCategoryPage', 
-                          state: { category: 'SIP' } }} ><Card.Img variant="top" src={process.env.PUBLIC_URL +"/SIP.jpg"} /></Link></a>
+        <a href=""><Link to={ '/SingleCategoryPage/SIP'}><Card.Img variant="top" src={process.env.PUBLIC_URL +"/SIP.jpg"} /></Link></a>
           <Card.Body>
-          <a href=""><Link to={{ 
-                          pathname: '/SingleCategoryPage', 
-                          state: { category: 'SIP' } }} > <Card.Title>SIP</Card.Title></Link></a>
+          <a href=""><Link to={ '/SingleCategoryPage/SIP'}> <Card.Title>SIP</Card.Title></Link></a>
             <Card.Text>
               Structural Insulated Panels (SIPs) are another form of panelized
               construction. These are panels that generally have two oriented
@@ -81,13 +70,9 @@ class Productslist extends Component {
           </Card.Body>
         </Card>
         <Card className="cardgrid">
-        <a href=""><Link to={{ 
-                          pathname: '/SingleCategoryPage', 
-                          state: { category: 'Panelized' } }} >  <Card.Img variant="top" src={process.env.PUBLIC_URL +"/Panelized.jpg"} /></Link></a>
+        <a href=""><Link to={ '/SingleCategoryPage/Panelized'}> <Card.Img variant="top" src={process.env.PUBLIC_URL +"/Panelized.jpg"} /></Link></a>
           <Card.Body>
-          <a href=""><Link to={{ 
-                          pathname: '/SingleCategoryPage', 
-                          state: { category: 'Panelized' } }} > <Card.Title>Panelized</Card.Title></Link></a>
+          <a href=""><Link to={ '/SingleCategoryPage/Panelized'}> <Card.Title>Panelized</Card.Title></Link></a>
             <Card.Text>
               Panelized construction is another popular type of prefab method.
               All of the exterior walls are installed on site like a jigsaw

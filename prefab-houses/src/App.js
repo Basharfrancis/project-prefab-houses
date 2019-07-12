@@ -10,7 +10,9 @@ import AllProductspage from "./Component/AllProductspage";
 import ContactPage from "./Component/ContactPage";
 import SingleCategoryPage from "./Component/SingleCategoryPage";
 import Singleproduct from "./Component/Singleproduct";
-import Admin from "./Component/Admin"
+import Admin from "./Component/Admin";
+import Login from './Auth/Login';
+import Logout from './Component/Logout'
  class App extends Component {
   constructor(props) {
     super(props);
@@ -55,7 +57,7 @@ import Admin from "./Component/Admin"
               render={routeProps => <AllProductspage {...routeProps} {...this.state} />}
             />
             <Route
-              path="/SingleCategoryPage/"
+              path="/SingleCategoryPage/:category"
               exact
               render={routeProps => <SingleCategoryPage {...routeProps} {...this.state} />}
             />
@@ -69,6 +71,8 @@ import Admin from "./Component/Admin"
               exact
               render={routeProps => <Admin arrayOfData={this.state.data} />}
             />
+        <Route path="/login" component={Login} />
+        <Route path="/logout" component={Logout} />
 
 
 
